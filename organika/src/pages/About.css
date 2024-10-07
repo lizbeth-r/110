@@ -1,0 +1,31 @@
+.about{
+    padding: 30px;
+    background-color: #e3e5e6;
+}
+
+.about .box{
+    width: 600px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #e0e5e7;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: opx 10px 15px -3px rgba(0,0,0,0.2);
+}
+
+.about h1{
+    color: rgb(227, 76, 50);
+    text-align: center;
+}
+
+.about h1 i{
+    color: #99B2DD;
+    margin-right: 10px;
+    
+}
+
+.about h5{
+    color: #333;
+    text-align: center;
+}

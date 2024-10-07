@@ -1,0 +1,32 @@
+.navbar {
+    background-color: rgb(227, 76, 50);
+}
+
+.navbar .navbar-brand{
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .nav-item a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn-outline-success {
+    background-color: rgb(173, 49, 27) !important;
+    border: 0px solid rgb(173, 49, 27)!important ;
+    color: white !important;
+}
+
+.btn-outline-success:hover {
+    background-color: rgb(214, 118, 101) !important;
+    color: white;
+}
+
+.d-flex .btn-user{
+    background-color: white;
+}
+
+.d-flex .btn-user:hover{
+    background-color: white;
+}

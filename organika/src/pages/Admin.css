@@ -1,0 +1,75 @@
+.admin{
+    background-color: #f6f2ef;
+    padding-top: 20px;
+}
+
+.admin h1{
+    text-align: center;
+    color: #5e81bd;
+}
+
+.admin .parent{
+    margin-top: 20px;
+    display: flex;
+}
+
+.admin .parent .products{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin .parent .coupons{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin .form{
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    width: 400px;   
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.admin .form div{
+    margin-bottom: 12px;
+}
+
+.admin .form .controls{
+    margin-top: 22px;
+    text-align: center;
+}
+
+.admin .prod {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+    background-color: white;
+    gap:10px;
+    width: 100%;
+}
+
+.admin .prod img {
+    height: 70px;
+}
+
+.admin .prod h5 {
+    flex: 4;
+}
+
+.admin .prod label {
+    flex: 1;
+}
+
+.admin .coupons-list{
+    margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+.qt-picker{
+    display: inline-block;
+}
+.qt-picker button{
+    margin: 0 6px;
+}
+
+.qt-picker label{
+    font-weight: bold;
+}
+
+
+

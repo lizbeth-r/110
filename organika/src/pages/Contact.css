@@ -1,0 +1,30 @@
+.contact {
+    margin-top: 20px;
+}
+
+.contact h1{
+    color: #e34c32;
+}
+
+.contact .form h3{
+    color: #5e81bd;
+}
+
+.contact .form{
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+.contact .form div{
+    margin-top: 12px;
+}
+
+.contact .form .controls{
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+.catalog h1{
+    margin: 15px 0px;
+}
+
+.catalog {
+    min-height: 600px;
+    background-color: white;
+}
+
+.catalog .filters button {
+    margin: 6px 4px;
+}
+
+.catalog h1{
+    color: #6786bd;
+}
+
+.filters .btn-custom{
+    border: 1px solid #b3b3b3;
+}
+
+.filters .btn-custom:hover{
+    border: 1px solid #b3b3b3;
+    color: #3f5e93;
+}
+
+.filters .btn-customAll{
+    background-color: #b9c9e3;
+}
+
+.filters .btn-customAll:hover{
+    background-color: #6b8cc1;
+    color: #2f569a;
+}
+
+.filters .btn-custom,
+.filters .btn-customAll{
+    color: #3f5e93;
+}
