@@ -37,3 +37,25 @@
 .filters .btn-customAll{
     color: #3f5e93;
 }
+
+.search-bar{
+    width: 400px !important; 
+    gap: 5px;
+}
+
+.price-filter{
+    display: flex;
+    height: auto;
+    gap: 5px;
+}
+
+.price-filter .form-control{
+    width: 150px;
+}
+
+.search-filter{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}

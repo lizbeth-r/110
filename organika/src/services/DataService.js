@@ -61,10 +61,12 @@ export const catalog = [
 
 export const categories = ['Fruit', 'Vegetables', 'Merchandise', 'Dairy & Eggs', 'Beverages'];
 
+export const products = catalog;
+
 class DataService {
     
-    async getProducts(){
-        let response = axios.get("http://127.0.0.1:5000/api/products");
+    async getProducts() {
+        const response = await axios.get("http://127.0.0.1:5000/api/catalog");
         return response.data;
     }
 
@@ -73,6 +75,10 @@ class DataService {
         return response.data;
     }
 
+    async getProductsByPriceRange(min, max) {
+        const response = await axios.get(`http://127.0.0.1:5000/api/products?min=${min}&max=${max}`);
+        return response.data;
+    }
 }
 
 export default new DataService();

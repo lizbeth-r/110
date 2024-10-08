@@ -1,9 +1,10 @@
 from flask import Flask, request
 import json
 from config import db
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.get("/")
 def home():
@@ -27,9 +28,11 @@ def fix_id(obj):
     return obj
 
 
-@app.get("/api/products")
-def read_products():
-    cursor = db.catalog.find({})
+@app.get("/api/products")    
+def read_all_products():
+    min_price = request.args.get('min', default=0, type=float)
+    max_price = request.args.get('max', default=float('inf'), type=float)
+    cursor = db.catalog.find({"price": {"$gte": min_price, "$lte": max_price}})
     catalog = []
     for prod in cursor:
         catalog.append(fix_id(prod))
@@ -38,9 +41,9 @@ def read_products():
 
 
 @app.post("/api/products")
-def save_products():
+def save_product():
     item = request.get_json()    
-    db.catolog.insert_one(item)
+    db.catalog.insert_one(item)
     return json.dumps(fix_id(item))
 
 
@@ -80,7 +83,7 @@ def read_products():
 @app.post("/api/catalog")
 def save_products():
     item = request.get_json()    
-    db.catolog.insert_one(item)
+    db.catalog.insert_one(item)
     return json.dumps(fix_id(item))
     
 @app.get("/api/catalog/<category>")

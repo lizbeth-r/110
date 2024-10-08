@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -5,6 +6,7 @@ import Footer from './components/footer';
 import Catalog from './pages/Catalog';
 import About from './pages/About';
 import Home from './pages/Home';
+import { products as catalogProducts } from './services/DataService';
 
 
 
@@ -19,11 +21,24 @@ import GlobalProvider from './state/GlobalProvider'
 import Cart from './pages/Cart';
 
 function App() {
+  const [filteredProducts, setFilteredProducts] = useState(catalogProducts);
+
+  const handleSearch = (query) => {
+    if (query === "") {
+      setFilteredProducts(catalogProducts); // Mostrar todos si no hay query
+    } else {
+      setFilteredProducts(
+        catalogProducts.filter((product) =>
+          product.title.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+    }
+  };
   return (
     <GlobalProvider>
       <BrowserRouter>
         <div className="App">
-          <Navbar></Navbar>
+        <Navbar onSearch={handleSearch} />
 
           <Routes>
             <Route path="/" element={<Home />} />
