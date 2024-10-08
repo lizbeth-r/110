@@ -4,7 +4,7 @@ import DataContext from "../state/DataContext";
 
 function Cart() {
     const { cart } = useContext(DataContext);
-
+    
     function getTotal() {
         let total = 0;
         for (let i = 0; i < cart.length; i++) {
@@ -23,11 +23,11 @@ function Cart() {
             <div className="parent">
                 <div className="list">
                     {
-                        cart.length == 0?
-                        <div className="alert alert-primary">
-                            <h3>Go to Catalog and add product there!</h3>
-                        </div>
-                        : null
+                        cart.length == 0 ?
+                            <div className="alert alert-primary">
+                                <h3>Go to Catalog and add product there!</h3>
+                            </div>
+                            : null
                     }
                     <div className="cat">
                         <h5>Product</h5>
@@ -53,6 +53,7 @@ function Cart() {
                     <h3>${getTotal()}</h3>
 
                     <button className="btn btn-primary">Proceed to payment</button>
+
                 </div>
             </div>
         </div>

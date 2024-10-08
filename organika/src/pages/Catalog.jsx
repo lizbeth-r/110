@@ -68,9 +68,9 @@ function Catalog() {
                 )}
             </div>
 
-            {products.filter(prod => filter === "" || prod.category === filter).map((prod) => (
-                <Product key={prod._id} data={prod} />
-            ))}
+            {filteredProducts.map((prod) => (
+                   <Product key={prod._id} data={prod} />
+               ))}
 
             <div className="search-filter">
                 <div className="price-filter">
